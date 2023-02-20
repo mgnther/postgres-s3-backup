@@ -1,0 +1,11 @@
+# Backup Postgres to S3
+
+Required environment variables:
+
+* DATABASE_PASSWORD
+* DATABASE_USER
+* DATABASE_HOST
+* AWS_ACCESS_KEY_ID
+* AWS_SECRET_ACCESS_KEY
+* AWS_BUCKET
+* FILE_PREFIX
