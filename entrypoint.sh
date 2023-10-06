@@ -21,6 +21,6 @@ fi
 
 echo "$(get_date) Postgres backup started"
 
-PGPASSWORD=$DATABASE_PASSWORD pg_dumpall -c -U $DATABASE_USER -h $DATABASE_HOST | aws s3 cp - s3://speechmind-db-backup/dump_$FILE_PREFIX`date +%d-%m-%Y`.sql
+PGPASSWORD=$DATABASE_PASSWORD pg_dumpall -c -U $DATABASE_USER -h $DATABASE_HOST | aws s3 cp - s3://$AWS_BUCKET/$FILE_PREFIX`date +%d-%m-%Y`.sql
 
 echo "$(get_date) Postgres backup completed successfully"
